@@ -8,6 +8,7 @@ if(dvds){
     res.status(200).json({
         error: false,
         mssg: "records found",
+        count: dvds.length,
         data: dvds
     });
 }
