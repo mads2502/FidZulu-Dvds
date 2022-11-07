@@ -66,22 +66,22 @@ describe("checks /team url", () => {
         });
     });
 });
-describe("checks post of DVD item", () => {
-    it("returns 201 and contains added item", (done) => {
-        data = {
-            "title": "Aqua Man",
-            "mpaa_rating": "PG",
-            "studio": "Walt Disney Video",
-            "time": "124",
-            "price": "2431.50"
-        };
-        let body = JSON.parse(data);
-        request.post(base_url + "/dvds", (error, response, body) => {
-            expect(response.statusCode).toBe(201);
-            // console.log(response);
-            // expect(response).toBeTruthy();
+// describe("checks post of DVD item", () => {
+//     it("returns 201 and contains added item", (done) => {
+//         data = {
+//             "title": "Aqua Man",
+//             "mpaa_rating": "PG",
+//             "studio": "Walt Disney Video",
+//             "time": "124",
+//             "price": "2431.50"
+//         };
+//         let body = JSON.parse(data);
+//         request.post(base_url + "/dvds", (error, response, body) => {
+//             expect(response.statusCode).toBe(201);
+//             // console.log(response);
+//             // expect(response).toBeTruthy();
 
-            done();
-        });
-    });
-});
+//             done();
+//         });
+//     });
+// });
