@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jasmine-node --captureExceptions spec"
   },
   "author": "",
   "license": "ISC",
@@ -15,11 +15,16 @@
     "express": "^4.18.2",
     "fs": "0.0.1-security",
     "http-errors": "^2.0.0",
+    "jasmine-node": "^3.0.0",
     "nodemon": "^2.0.20",
     "path": "^0.12.7",
+    "request": "^2.88.2",
+    "supertest": "^6.3.1",
     "url": "^0.11.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine-node": "^3.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scrodenbug/FidZulu-Dvds.git"

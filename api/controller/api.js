@@ -1,15 +1,24 @@
-const { query_by_location,team , insertDvds} = require("../module/Dvd");
+const { query_by_location,team , insertDvds,dvds} = require("../module/Dvd");
 exports.getDvds = async (req, res) => {
     try {
         let arg = "location";
         let value = req.query.location;
-        let dvds = await query_by_location(arg, value);
+        if(value==null){
+            res.status(200).json({
+                error: false,
+                mssg: "records found",
+                count: dvds.length,
+                data: dvds
+            });
+            return;
+        }
+        let dvds_modified = await query_by_location(arg, value);
 if(dvds){
     res.status(200).json({
         error: false,
         mssg: "records found",
         count: dvds.length,
-        data: dvds
+        data: dvds_modified
     });
 }
        
@@ -51,6 +60,7 @@ exports.getTeam=(req,res)=>{
         })
     }
 }
+
 
 //POST METHOD:OPTIONAL
 exports.insertDvds=(req,res)=>{
