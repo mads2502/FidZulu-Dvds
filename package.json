@@ -16,6 +16,17 @@
     "fs": "0.0.1-security",
     "http-errors": "^2.0.0",
     "nodemon": "^2.0.20",
+    "path": "^0.12.7",
     "url": "^0.11.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scrodenbug/FidZulu-Dvds.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/scrodenbug/FidZulu-Dvds/issues"
+  },
+  "homepage": "https://github.com/scrodenbug/FidZulu-Dvds#readme"
 }

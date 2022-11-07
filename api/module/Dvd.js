@@ -1,18 +1,15 @@
 
-console.log(process.cwd())
-// const data = fs.readFileSync('../../data/location.json', 'utf8');
-// console.log(data)
-
-
+const path = require('path');
+const filePath = path.join(__dirname, '../../data/dvds.json');
 const fs=require('fs');
 // let file_1='./Data/dvds.json';
-const data=fs.readFileSync('../../data/dvds.json','utf8');
+const data=fs.readFileSync(filePath,'utf8');
 exports.dvds=JSON.parse(data);
 
-const team=fs.readFileSync('../../data/team.json','utf8');
+const team=fs.readFileSync(path.join(__dirname, '../../data/team.json'),'utf8');
 exports.team=JSON.parse(team);
 
-const location=fs.readFileSync('../../data/location.json','utf8');
+const location=fs.readFileSync(path.join(__dirname, '../../data/location.json'),'utf8');
 exports.location=JSON.parse(location);
 
 exports.query_by_location=(arg,value)=>{
@@ -35,7 +32,7 @@ exports.query_by_location=(arg,value)=>{
 exports.insertDvds=(value)=>{
     try{
         this.dvds.push(value);
-        fs.writeFileSync('../../data/dvds.json','utf8',JSON.stringify(this.dvds));
+        fs.writeFileSync(path.join(__dirname, '../../data/dvds.json'),JSON.stringify(this.dvds));
          
    return value;
     }
