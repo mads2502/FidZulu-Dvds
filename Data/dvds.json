@@ -26,5 +26,12 @@
     "studio": "Walt Disney Video",
     "time": 123,
     "price": 24.88
+  },
+  {
+    "title": "Captain ",
+    "mpaa_rating": "PG",
+    "studio": "Walt Disney Video",
+    "time": 123,
+    "price": 24.88
   }
 ]
